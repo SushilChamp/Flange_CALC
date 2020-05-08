@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flange.calculator.flangecalc.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flange Design Hub"
+        android:id="@+id/flangedesignhub"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:textColor="#E91E63"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp">
+
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="20"
+            android:alignmentMode="alignMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/designdata"
+                android:text="Design Data"
+                android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/designremark"
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="end"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterpressure"
+                android:text="Design Pressure"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/pressure"
+                android:hint="Psi"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/pressuretype"
+                android:text="Pressure Type Applied"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <ToggleButton
+                android:id="@+id/butpressure"
+                android:textOff="Internal Pressure"
+                android:textOn="External Pressure"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entertemp"
+                android:text="Design Temperature"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/temp"
+                android:hint="Deg F"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterforce"
+                android:text="External Axial Force"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/force"
+                android:hint="lb."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entermoment"
+                android:text="External Bending Moment"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/moment"
+                android:hint="in. lb."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/gasketdata"
+                android:text="Gasket Data"
+                android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/gasketremark"
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="end"/>
+
+
+
+
+            <TextView
+                android:id="@+id/selectgasket"
+                android:text="Select Gasket Material"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/butgasketmaterial"
+                android:text="Gasket Material"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entergasketod"
+                android:text="Gasket OD"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/gasketod"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entergasketid"
+                android:text="Gasket ID"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/gasketid"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entergasketcontactarea"
+                android:text="Gasket Contact Circle"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/gasketcontactarea"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/gaskettype"
+                android:text="Gasket Type Selected"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <ToggleButton
+                android:id="@+id/butgasket"
+                android:textOff="NSEG Selected"
+                android:textOn="SEG Selected"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/flangedata"
+                android:text="Flange Data"
+                android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/flangeremark"
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="end"/>
+
+
+
+
+            <TextView
+                android:id="@+id/selectflange"
+                android:text="Select Flange Material"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/butflangematerial"
+                android:text="Flange Material"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/selectpipe"
+                android:text="Select Pipe Material"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/butpipematerial"
+                android:text="Pipe Material"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/selectbolt"
+                android:text="Select Bolt Material"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/butboltmaterial"
+                android:text="Bolt Material"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/flangetype"
+                android:text="Flange Type Selected"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <ToggleButton
+                android:id="@+id/butflange"
+                android:textOff="Integral Selected"
+                android:textOn="Loose Selected"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:background="#00BCD4"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterflangeod"
+                android:text="Flange OD"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/flangeod"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterflangeid"
+                android:text="Flange ID"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/flangeid"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterflangebcd"
+                android:text="Flange Bolt Circle Diameter"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/flangebcd"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterflangethk"
+                android:text="Flange Thickness"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/flangethk"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/entersmallhub"
+                android:text="Small Hub Thickness"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/hubsmall"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterlargehub"
+                android:text="Large Hub Thickness"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/hublarge"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterhublength"
+                android:text="Flange Hub Length"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/hublength"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterrigidityfactor"
+                android:text="Flange Rigidity Factor"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/rigidity"
+                android:hint="0.3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterboltnum"
+                android:text="Number of Bolt in Flange"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/boltnum"
+                android:hint="Qty."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <TextView
+                android:id="@+id/enterboltdia"
+                android:text="Bolt Diameter"
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/boltdia"
+                android:hint="in."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:inputType="number|numberDecimal"/>
+
+
+
+
+            <Button
+                android:id="@+id/butsubmit"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#00BCD4"
+                android:text="Submit Data"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/submitremark"
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"/>
+
+
+
+
+
+        </GridLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
